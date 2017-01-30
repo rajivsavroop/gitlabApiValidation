@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="Gitlab Verification" timestamp="2017-01-30T11:55:31" hostname="localhost" time="9.782" errors="0" tests="17" skipped="0" disabled="0" failures="0">
+  <testcase classname="Gitlab Verification" name="GET - Verifies initially that there is no project in gitlab" time="0.083" />
+  <testcase classname="Gitlab Verification" name="POST - Verifies that a new project is created in Gitlab" time="2.357" />
+  <testcase classname="Gitlab Verification" name="GET - Verifies that the Project is created in gitlab" time="0.055" />
+  <testcase classname="Gitlab Verification" name="PUT - Verifies that the project can be updated" time="0.081" />
+  <testcase classname="Gitlab Verification" name="POST - Creates a new file in the repository" time="1.044" />
+  <testcase classname="Gitlab Verification" name="POST - Verifies that a new issue is created in the project" time="0.279" />
+  <testcase classname="Gitlab Verification" name="PUT - Verifies the issue can be successfully Edited" time="0.22" />
+  <testcase classname="Gitlab Verification" name="GET - Verifies the successful retrival of the issue" time="0.144" />
+  <testcase classname="Gitlab Verification" name="PUT - Verifies that the issue can be closed" time="0.297" />
+  <testcase classname="Gitlab Verification" name="GET: Checks for the existing branches" time="0.067" />
+  <testcase classname="Gitlab Verification" name="POST - Verifies that a branch is created in the project" time="1.007" />
+  <testcase classname="Gitlab Verification" name="POST - Creates a new file in the new branch" time="0.892" />
+  <testcase classname="Gitlab Verification" name="POST - Creates a new Merge Request" time="0.43" />
+  <testcase classname="Gitlab Verification" name="GET - Verifies for changes in the merge" time="0.145" />
+  <testcase classname="Gitlab Verification" name="PUT - Accepts the changes in the merge" time="1.448" />
+  <testcase classname="Gitlab Verification" name="DELETE - Verifies that the created project is DELETED" time="0.002" />
+  <testcase classname="Gitlab Verification" name="GET - Verifies that the project is deleted from gitlab" time="1.227" />
+ </testsuite>
+</testsuites>

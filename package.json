@@ -1,0 +1,24 @@
+{
+  "name": "gitlab_verification",
+  "version": "1.0.0",
+  "description": "Validation test for gitlab",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rajivsavroop/gitlabApiValidation.git"
+  },
+  "keywords": [
+    "gitlab",
+    "validation"
+  ],
+  "author": "Rajiv Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^2.3.2",
+    "jasmine-reporters": "^2.0.7",
+    "request": "^2.65.0"
+  }
+}
