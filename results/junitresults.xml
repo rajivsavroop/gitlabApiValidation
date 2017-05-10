@@ -1,22 +1,99 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
- <testsuite name="Gitlab Verification" timestamp="2017-01-30T11:55:31" hostname="localhost" time="9.782" errors="0" tests="17" skipped="0" disabled="0" failures="0">
-  <testcase classname="Gitlab Verification" name="GET - Verifies initially that there is no project in gitlab" time="0.083" />
-  <testcase classname="Gitlab Verification" name="POST - Verifies that a new project is created in Gitlab" time="2.357" />
-  <testcase classname="Gitlab Verification" name="GET - Verifies that the Project is created in gitlab" time="0.055" />
-  <testcase classname="Gitlab Verification" name="PUT - Verifies that the project can be updated" time="0.081" />
-  <testcase classname="Gitlab Verification" name="POST - Creates a new file in the repository" time="1.044" />
-  <testcase classname="Gitlab Verification" name="POST - Verifies that a new issue is created in the project" time="0.279" />
-  <testcase classname="Gitlab Verification" name="PUT - Verifies the issue can be successfully Edited" time="0.22" />
-  <testcase classname="Gitlab Verification" name="GET - Verifies the successful retrival of the issue" time="0.144" />
-  <testcase classname="Gitlab Verification" name="PUT - Verifies that the issue can be closed" time="0.297" />
-  <testcase classname="Gitlab Verification" name="GET: Checks for the existing branches" time="0.067" />
-  <testcase classname="Gitlab Verification" name="POST - Verifies that a branch is created in the project" time="1.007" />
-  <testcase classname="Gitlab Verification" name="POST - Creates a new file in the new branch" time="0.892" />
-  <testcase classname="Gitlab Verification" name="POST - Creates a new Merge Request" time="0.43" />
-  <testcase classname="Gitlab Verification" name="GET - Verifies for changes in the merge" time="0.145" />
-  <testcase classname="Gitlab Verification" name="PUT - Accepts the changes in the merge" time="1.448" />
-  <testcase classname="Gitlab Verification" name="DELETE - Verifies that the created project is DELETED" time="0.002" />
-  <testcase classname="Gitlab Verification" name="GET - Verifies that the project is deleted from gitlab" time="1.227" />
+ <testsuite name="Gitlab Verification" timestamp="2017-05-10T13:29:25" hostname="localhost" time="7.277" errors="0" tests="17" skipped="0" disabled="0" failures="6">
+  <testcase classname="Gitlab Verification" name="GET - Verifies initially that there is no project in gitlab" time="0.338" />
+  <testcase classname="Gitlab Verification" name="POST - Verifies that a new project is created in Gitlab" time="3.208" />
+  <testcase classname="Gitlab Verification" name="GET - Verifies that the Project is created in gitlab" time="0.079" />
+  <testcase classname="Gitlab Verification" name="PUT - Verifies that the project can be updated" time="0.099" />
+  <testcase classname="Gitlab Verification" name="POST - Creates a new file in the repository" time="0.095">
+   <failure type="toBe" message="Expected 500 to be 201."><![CDATA[Error: Expected 500 to be 201.
+    at stack (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1640:17)
+    at buildExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1610:14)
+    at Spec.Env.expectationResultFactory (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:655:18)
+    at Spec.addExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:342:34)
+    at Expectation.addExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:599:21)
+    at Expectation.toBe (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1564:12)
+    at Request._callback (/home/rkumar/Git/gitlabApiValidation/spec/support/gitTest/git.spec.js:157:43)
+    at Request.self.callback (/home/rkumar/Git/gitlabApiValidation/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Gitlab Verification" name="POST - Verifies that a new issue is created in the project" time="0.436" />
+  <testcase classname="Gitlab Verification" name="PUT - Verifies the issue can be successfully Edited" time="0.295" />
+  <testcase classname="Gitlab Verification" name="GET - Verifies the successful retrival of the issue" time="0.158" />
+  <testcase classname="Gitlab Verification" name="PUT - Verifies that the issue can be closed" time="0.414" />
+  <testcase classname="Gitlab Verification" name="GET: Checks for the existing branches" time="0.058" />
+  <testcase classname="Gitlab Verification" name="POST - Verifies that a branch is created in the project" time="0.062">
+   <failure type="toBe" message="Expected 400 to be 201."><![CDATA[Error: Expected 400 to be 201.
+    at stack (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1640:17)
+    at buildExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1610:14)
+    at Spec.Env.expectationResultFactory (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:655:18)
+    at Spec.addExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:342:34)
+    at Expectation.addExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:599:21)
+    at Expectation.toBe (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1564:12)
+    at Request._callback (/home/rkumar/Git/gitlabApiValidation/spec/support/gitTest/git.spec.js:327:43)
+    at Request.self.callback (/home/rkumar/Git/gitlabApiValidation/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Gitlab Verification" name="POST - Creates a new file in the new branch" time="0.091">
+   <failure type="toBe" message="Expected 500 to be 201."><![CDATA[Error: Expected 500 to be 201.
+    at stack (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1640:17)
+    at buildExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1610:14)
+    at Spec.Env.expectationResultFactory (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:655:18)
+    at Spec.addExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:342:34)
+    at Expectation.addExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:599:21)
+    at Expectation.toBe (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1564:12)
+    at Request._callback (/home/rkumar/Git/gitlabApiValidation/spec/support/gitTest/git.spec.js:358:43)
+    at Request.self.callback (/home/rkumar/Git/gitlabApiValidation/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Gitlab Verification" name="POST - Creates a new Merge Request" time="0.358" />
+  <testcase classname="Gitlab Verification" name="GET - Verifies for changes in the merge" time="0.161">
+   <failure type="toBeGreaterThan" message="Expected 0 to be greater than 0."><![CDATA[Error: Expected 0 to be greater than 0.
+    at stack (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1640:17)
+    at buildExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1610:14)
+    at Spec.Env.expectationResultFactory (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:655:18)
+    at Spec.addExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:342:34)
+    at Expectation.addExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:599:21)
+    at Expectation.toBeGreaterThan (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1564:12)
+    at Request._callback (/home/rkumar/Git/gitlabApiValidation/spec/support/gitTest/git.spec.js:415:45)
+    at Request.self.callback (/home/rkumar/Git/gitlabApiValidation/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Gitlab Verification" name="PUT - Accepts the changes in the merge" time="0.124">
+   <failure type="toBe" message="Expected 405 to be 200."><![CDATA[Error: Expected 405 to be 200.
+    at stack (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1640:17)
+    at buildExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1610:14)
+    at Spec.Env.expectationResultFactory (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:655:18)
+    at Spec.addExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:342:34)
+    at Expectation.addExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:599:21)
+    at Expectation.toBe (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1564:12)
+    at Request._callback (/home/rkumar/Git/gitlabApiValidation/spec/support/gitTest/git.spec.js:441:43)
+    at Request.self.callback (/home/rkumar/Git/gitlabApiValidation/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)]]>
+   </failure>
+   <failure type="toBe" message="Expected undefined to be &apos;merged&apos;."><![CDATA[Error: Expected undefined to be 'merged'.
+    at stack (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1640:17)
+    at buildExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1610:14)
+    at Spec.Env.expectationResultFactory (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:655:18)
+    at Spec.addExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:342:34)
+    at Expectation.addExpectationResult (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:599:21)
+    at Expectation.toBe (/home/rkumar/Git/gitlabApiValidation/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1564:12)
+    at Request._callback (/home/rkumar/Git/gitlabApiValidation/spec/support/gitTest/git.spec.js:442:36)
+    at Request.self.callback (/home/rkumar/Git/gitlabApiValidation/node_modules/request/request.js:186:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Gitlab Verification" name="DELETE - Verifies that the created project is DELETED" time="0.007" />
+  <testcase classname="Gitlab Verification" name="GET - Verifies that the project is deleted from gitlab" time="1.275" />
  </testsuite>
 </testsuites>

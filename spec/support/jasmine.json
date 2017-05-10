@@ -1,6 +1,6 @@
 {
   "spec_dir": "spec",
   "spec_files": [
-    "support/gitTest/git.spec.js"
+    "./git.spec.js"
   ]
 }

@@ -1,11 +1,11 @@
 var jasmineReporter = require('jasmine-reporters');
 var util=require('util');
 var request = require('request');
-var token='Update with your gitlab token';
+var token='?private_token='+'yourToken';
 var issues={};
 var projects=[];
 var merges = {};
-var siteUrl = "UPDATE with your endpoint"
+var siteUrl = "https://gitlab.example.com/api/v3/projects/" //Update with your Gitlab URl
 
 
 jasmine.getEnv().addReporter(
@@ -26,6 +26,8 @@ jasmine.getEnv().addReporter(
          }
      )
  );
+
+
 
 describe(
   'Gitlab Verification',
