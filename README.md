@@ -10,5 +10,5 @@ To run the tests:
 
 1. Clone repository
 2. npm run install
-3. Update "siteURL" and "token" in "spec/support/gitTest/git.spec.js"
+3. Update "siteURL" and "token" in "spec/git.spec.js"
 4. "npm run test"
